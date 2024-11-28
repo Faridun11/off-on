@@ -1,0 +1,41 @@
+.switch {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 80px;
+}
+
+.slider {
+    background-color: grey;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.slider::before {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50px;
+    top: 22px;
+    left: 25px;
+    content: "";
+}
+
+input:checked+.slider:before {
+    transform: translateX(20deg);
+    border-radius: 50px;
+    transform: translateX(50px);
+    transition-duration: "";
+    -ms-transform: translate(20px);
+    -webkit-transform: translate(92px);
+    background: #000;
+}
+
+input {
+    display: none;
+}
